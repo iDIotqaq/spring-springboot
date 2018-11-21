@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import cn.com.taiji.spring_framwork.service.*;
 
 import cn.com.taiji.spring_framwork.bean.*;
-public class Test2 {
+public class ApplicatonTest {
 	private AnnotationConfigApplicationContext context;
 	
 	@Before

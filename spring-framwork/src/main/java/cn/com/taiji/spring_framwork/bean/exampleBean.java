@@ -35,5 +35,9 @@ public class exampleBean {
 	public void setI(int i) {
 		this.i = i;
 	}
-	
+	public void run() {
+		anotherBean.say();
+		otherBean.say();
+		System.out.println(i);
+	}
 }
