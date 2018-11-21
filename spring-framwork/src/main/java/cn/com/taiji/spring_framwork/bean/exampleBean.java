@@ -1,5 +1,7 @@
 package cn.com.taiji.spring_framwork.bean;
 
+import javax.annotation.PostConstruct;
+
 public class exampleBean {
 	private anotherBean anotherBean;
 	private otherBean otherBean;
@@ -39,5 +41,9 @@ public class exampleBean {
 		anotherBean.say();
 		otherBean.say();
 		System.out.println(i);
+	}
+	@PostConstruct
+	public void start() {
+		System.out.println("开始");
 	}
 }

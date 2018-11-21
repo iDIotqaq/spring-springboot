@@ -1,5 +1,7 @@
 package cn.com.taiji.spring_framwork.bean;
 
+import javax.annotation.PostConstruct;
+
 public class anotherBean {
 	private String name;
 	public void say() {
@@ -11,5 +13,6 @@ public class anotherBean {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 	
 }

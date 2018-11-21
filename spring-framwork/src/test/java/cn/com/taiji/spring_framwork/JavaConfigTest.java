@@ -4,8 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import cn.com.taiji.spring_framwork.bean.exampleBean;
-
+import cn.com.taiji.spring_framwork.bean.*;
+import cn.com.taiji.spring_framwork.service.*;
 public class JavaConfigTest {
 	private AnnotationConfigApplicationContext context;
 	
@@ -24,5 +24,13 @@ public class JavaConfigTest {
 	@Test
 	public void exampleBean() {
 		context.getBean("exampleBean",exampleBean.class).run();
+	}
+	@Test
+	public void exampleBean2() {
+		context.getBean("exampleBean2",exampleBean2.class).run();
+	}
+	@Test
+	public void HelloworldService2() {
+		context.getBean("helloworldService2",HelloworldService2.class).sayName();
 	}
 }

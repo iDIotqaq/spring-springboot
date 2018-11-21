@@ -1,10 +1,10 @@
 package cn.com.taiji.spring_framwork.bean;
 
+import javax.annotation.Resource;
 import javax.inject.Inject;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 @Repository
