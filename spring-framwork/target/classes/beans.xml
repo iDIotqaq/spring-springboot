@@ -19,8 +19,11 @@
 		<property name="name" value="other"></property>
 	</bean>
 	<bean id="exampleBean" class="cn.com.taiji.spring_framwork.bean.exampleBean">
-		<property name="anotherBean" ref="aotherBean"></property>
+		<!-- <property name="anotherBean" ref="aotherBean"></property>
 		<property name="otherBean" ref="otherBean"></property>
-		<property name="i" value="333"></property>
+		<property name="i" value="333"></property> -->
+		<constructor-arg type="anotherBean" ref="aotherBean"></constructor-arg>
+		<constructor-arg type="otherBean" ref="otherBean"></constructor-arg>
+		<constructor-arg type="int" value="867"></constructor-arg>
 	</bean>
 </beans>

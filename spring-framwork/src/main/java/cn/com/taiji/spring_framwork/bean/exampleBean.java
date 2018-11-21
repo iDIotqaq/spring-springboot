@@ -4,6 +4,19 @@ public class exampleBean {
 	private anotherBean anotherBean;
 	private otherBean otherBean;
 	private int i;
+	
+	
+	
+	public exampleBean() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public exampleBean(anotherBean anotherBean,otherBean otherBean, int i) {
+		super();
+		this.anotherBean = anotherBean;
+		this.otherBean = otherBean;
+		this.i = i;
+	}
 	public anotherBean getAnotherBean() {
 		return anotherBean;
 	}
