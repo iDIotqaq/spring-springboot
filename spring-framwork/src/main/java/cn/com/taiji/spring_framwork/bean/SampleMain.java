@@ -3,6 +3,8 @@ package cn.com.taiji.spring_framwork.bean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import cn.com.taiji.spring_framwork.service.HelloworldService;
+
 public class SampleMain {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");

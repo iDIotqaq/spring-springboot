@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import cn.com.taiji.spring_framwork.bean.*;
+import cn.com.taiji.spring_framwork.service.HelloworldService;
 
 public class BeanXmlTest {
 	private ClassPathXmlApplicationContext context;
@@ -20,7 +21,8 @@ public class BeanXmlTest {
 		//获取所有bean 的名字
 		String[] names = context.getBeanDefinitionNames();
 		for (String string : names) {
-			System.out.println(string);
+			System.out.println(string+"~~~~"+string.getClass());
+			
 		}
 		
 	}
@@ -29,6 +31,7 @@ public class BeanXmlTest {
 	public void test() {
 		HelloworldService hello = (HelloworldService) context.getBean("HelloworldService");
 		hello.sayName();
+		context.close();
 	}
 	
 	@Test

@@ -1,4 +1,4 @@
-package cn.com.taiji.spring_framwork.bean;
+package cn.com.taiji.spring_framwork.service;
 
 public class HelloworldService {
 	private String name;
@@ -19,4 +19,5 @@ public class HelloworldService {
 	public void sayName() {
 		System.out.println("hello,"+name);
 	}
+
 }
