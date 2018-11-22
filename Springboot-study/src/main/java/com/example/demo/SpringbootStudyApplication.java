@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.support.ServletRequestHandledEvent;
 
+import com.example.demo.bean.User;
 import com.example.demo.bean.yangyeBean;
 
 @SpringBootApplication
@@ -25,6 +26,7 @@ public class SpringbootStudyApplication {
 //	public String helloworld() {
 //		return "hello yy";
 //	}
+	
 	public static void main(String[] args) {
 		
 		SpringApplication.run(SpringbootStudyApplication.class, args);
@@ -46,6 +48,7 @@ public class SpringbootStudyApplication {
 				yangyeBean bean = new yangyeBean();
 				bean.setName("aaaaa");
 				System.out.println(bean);
+				User user = new User();
 				System.out.println("testA is running......");
 			}
 		};
