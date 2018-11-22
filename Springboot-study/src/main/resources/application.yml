@@ -1,0 +1,8 @@
+my:
+ name: yangye
+ age: ${random.int(8000)}
+ sex: 未知
+ address: 蓟县
+spring:
+  profiles:
+    active: dev
