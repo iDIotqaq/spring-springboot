@@ -2,6 +2,11 @@ package com.example.demo;
 
 import java.util.stream.Collectors;
 
+import javax.annotation.PostConstruct;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
@@ -11,22 +16,32 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.support.ServletRequestHandledEvent;
 
 import com.example.demo.bean.User;
 import com.example.demo.bean.yangyeBean;
 
+
+
 @SpringBootApplication
 
 public class SpringbootStudyApplication {
+	
 //	
 //	@RequestMapping("/yy")
 //	public String helloworld() {
 //		return "hello yy";
 //	}
+	private static final Logger logger = LoggerFactory.getLogger(SpringbootStudyApplication.class);
 	
+	@PostConstruct
+	public void logSomething() {
+		logger.debug("debug");
+		logger.warn("warn");
+		logger.info("info");
+		logger.trace("trace");
+		logger.error("error");
+	}
 	public static void main(String[] args) {
 		
 		SpringApplication.run(SpringbootStudyApplication.class, args);
@@ -40,6 +55,7 @@ public class SpringbootStudyApplication {
 	}
 	@Bean
 	public static CommandLineRunner testA() {
+		
 		CommandLineRunner runner = new CommandLineRunner() {
 			
 			@Override
@@ -50,6 +66,8 @@ public class SpringbootStudyApplication {
 				System.out.println(bean);
 				User user = new User();
 				System.out.println("testA is running......");
+			
+				
 			}
 		};
 		return runner;

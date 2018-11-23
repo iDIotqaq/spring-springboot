@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.bean.User;
 import com.example.demo.bean.yangyeBean;
+import com.example.demo.service.MessageService;
 
 @RestController
 public class HelloControl {
@@ -21,10 +22,11 @@ public class HelloControl {
 	private yangyeBean bean;
 	@Autowired
 	private User user;
+
 	@RequestMapping("/yy")
 	public String helloworld() {
 		System.out.println(bean.toString());
-		return "hello yy is sb";
+		return "123";
 	}
 	@RequestMapping("/person")
 	public yangyeBean person() {

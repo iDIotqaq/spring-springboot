@@ -3,6 +3,28 @@ my:
  age: ${random.int(8000)}
  sex: 未知
  address: 蓟县
+management:
+  security:
+    enabled: false #关闭安全认证
+  port: 8888 #开放端口号
+  context-path: /abc  #目录
+#配置端点
+endpoints:
+  actuator:
+    enabled: true
+  shutdown: 
+    enabled: true
+
+info:
+  app:
+    name: zhangxx
+    version: 1.0.0
+name: yangye
 spring:
-  profiles:
-    active: dev
+ profiles:
+  active: dev
+
+---
+spring:
+ profiles: goodbye
+name: yy
