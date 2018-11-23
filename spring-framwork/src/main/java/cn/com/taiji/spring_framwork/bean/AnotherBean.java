@@ -2,7 +2,7 @@ package cn.com.taiji.spring_framwork.bean;
 
 import javax.annotation.PostConstruct;
 
-public class anotherBean {
+public class AnotherBean {
 	private String name;
 	public void say() {
 		System.out.println("my name is "+ name);

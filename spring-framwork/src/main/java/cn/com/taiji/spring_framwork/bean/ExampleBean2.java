@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class exampleBean2 {
+public class ExampleBean2 {
 	@Inject
 	private FirstBean FirstBean;
 	@Autowired
@@ -17,11 +17,11 @@ public class exampleBean2 {
 	private int i;
 	
 	
-	public exampleBean2() {
+	public ExampleBean2() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public exampleBean2(cn.com.taiji.spring_framwork.bean.FirstBean firstBean,
+	public ExampleBean2(cn.com.taiji.spring_framwork.bean.FirstBean firstBean,
 			cn.com.taiji.spring_framwork.bean.SecondBean secondBean, int i) {
 		super();
 		FirstBean = firstBean;

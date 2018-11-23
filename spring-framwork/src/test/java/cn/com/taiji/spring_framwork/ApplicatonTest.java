@@ -27,7 +27,7 @@ public class ApplicatonTest {
 	}
 	@Test
 	public void exampleBean2() {
-		context.getBean("exampleBean2",exampleBean2.class).run();
+		context.getBean("exampleBean2",ExampleBean2.class).run();
 	}
 	
 	@Test

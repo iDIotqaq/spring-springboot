@@ -36,16 +36,16 @@ public class BeanXmlTest {
 	
 	@Test
 	public void lifeBean() {
-		lifeBean life = (lifeBean)context.getBean("lifeBean");
+		LifeBean life = (LifeBean)context.getBean("lifeBean");
 		life.run();
 		context.close();
 	}
 	
 	@Test
 	public void example() {
-		exampleBean example = (exampleBean)context.getBean("exampleBean");
-		anotherBean aotherBean =  example.getAnotherBean();
-		otherBean otherBean = example.getOtherBean();
+		ExampleBean example = (ExampleBean)context.getBean("exampleBean");
+		AnotherBean aotherBean =  example.getAnotherBean();
+		OtherBean otherBean = example.getOtherBean();
 		aotherBean.say();
 		otherBean.say();
 		System.out.println(example.getI());

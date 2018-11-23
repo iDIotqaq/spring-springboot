@@ -11,22 +11,22 @@ import cn.com.taiji.spring_framwork.bean.*;
 public class SampleConfig {
 	
 	@Bean
-	public anotherBean anotherBean() {
-		anotherBean anotherBean = new anotherBean();
+	public AnotherBean anotherBean() {
+		AnotherBean anotherBean = new AnotherBean();
 		anotherBean.setName("First");
 		return anotherBean;
 	}
 	
 	@Bean 
-	public otherBean otherBean() {
-		otherBean otherBean = new otherBean();
+	public OtherBean otherBean() {
+		OtherBean otherBean = new OtherBean();
 		otherBean.setName("Second");
 		return otherBean;
 	}
 	
 	@Bean
-	public exampleBean exampleBean() {
-		exampleBean exampleBean = new exampleBean();
+	public ExampleBean exampleBean() {
+		ExampleBean exampleBean = new ExampleBean();
 		exampleBean.setAnotherBean(anotherBean());
 		exampleBean.setOtherBean(otherBean());
 		exampleBean.setI(587);

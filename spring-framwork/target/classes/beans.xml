@@ -17,15 +17,15 @@
 		<property name="name" value="yangye"/>
 		<!-- <constructor-arg type="String" value="constructor"></constructor-arg> -->
 	</bean>
-	<bean id="lifeBean" class="cn.com.taiji.spring_framwork.bean.lifeBean" init-method="start" destroy-method="stop"></bean>
+	<bean id="lifeBean" class="cn.com.taiji.spring_framwork.bean.LifeBean" init-method="start" destroy-method="stop"></bean>
 	
-	<bean id="aotherBean" class="cn.com.taiji.spring_framwork.bean.anotherBean">
+	<bean id="aotherBean" class="cn.com.taiji.spring_framwork.bean.AnotherBean">
 		<property name="name" value="aoherBean"></property>
 	</bean>
-	<bean id="otherBean" class="cn.com.taiji.spring_framwork.bean.otherBean">
+	<bean id="otherBean" class="cn.com.taiji.spring_framwork.bean.OtherBean">
 		<property name="name" value="other"></property>
 	</bean>
-	<bean id="exampleBean" class="cn.com.taiji.spring_framwork.bean.exampleBean">
+	<bean id="exampleBean" class="cn.com.taiji.spring_framwork.bean.ExampleBean">
 		<!-- <property name="anotherBean" ref="aotherBean"></property>
 		<property name="otherBean" ref="otherBean"></property>
 		<property name="i" value="333"></property> -->

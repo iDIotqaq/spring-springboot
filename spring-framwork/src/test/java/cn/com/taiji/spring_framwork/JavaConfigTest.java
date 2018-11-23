@@ -23,11 +23,11 @@ public class JavaConfigTest {
 	
 	@Test
 	public void exampleBean() {
-		context.getBean("exampleBean",exampleBean.class).run();
+		context.getBean("exampleBean",ExampleBean.class).run();
 	}
 	@Test
 	public void exampleBean2() {
-		context.getBean("exampleBean2",exampleBean2.class).run();
+		context.getBean("exampleBean2",ExampleBean2.class).run();
 	}
 	@Test
 	public void HelloworldService2() {

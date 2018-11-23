@@ -1,6 +1,6 @@
 package cn.com.taiji.spring_framwork.bean;
 
-public class otherBean {
+public class OtherBean {
 	private String name;
 	public void say() {
 		System.out.println("my name is " + name);
