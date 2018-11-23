@@ -313,3 +313,48 @@ info:
     version: 1.0.0
 ````
 
+### Spring-admin
+
+```xml
+<!--在admin中添加依赖-->
+<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-server</artifactId>
+</dependency>
+
+<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-server-ui</artifactId>
+</dependency>
+<!-- 在被管理的项目添加依赖 -->
+<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<version>1.5.6</version>
+</dependency>
+```
+
+````java
+//再启动服务添加注解
+@Configuration
+@EnableAutoConfiguration
+@EnableAdminServer
+````
+
+````properties
+#在被管理项目中添加
+spring.boot.admin.url=http://localhost:8000  
+management.security.enabled=false
+````
+
+````yaml
+#还可以用yml文件添加
+spring:
+  boot:
+    admin:
+      url: http://localhost:8000  
+management:
+  security:
+    enabled: false #关闭安全认证
+````
+
