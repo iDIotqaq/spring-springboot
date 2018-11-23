@@ -6,15 +6,14 @@ my:
 management:
   security:
     enabled: false #关闭安全认证
-  port: 8888 #开放端口号
-  context-path: /abc  #目录
+#  port: 8888 #开放端口号
+#  context-path: /abc  #目录
 #配置端点
 endpoints:
   actuator:
     enabled: true
   shutdown: 
     enabled: true
-
 info:
   app:
     name: zhangxx
@@ -23,7 +22,9 @@ name: yangye
 spring:
  profiles:
   active: dev
-
+ boot:
+    admin:
+      url: http://localhost:8000  
 ---
 spring:
  profiles: goodbye
