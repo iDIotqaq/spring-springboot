@@ -136,6 +136,46 @@ public class SampleConfig {
 + application.properties
 + application.yml
 
+### 配置文件加载位置
+
+springboot 启动会扫描以下位置的application.properties或者application.yml文件作为Spring boot的默认配置文件
+
+–file:./config/
+
+–file:./
+
+–classpath:/config/
+
+–classpath:/
+
+优先级由高到底，高优先级的配置会覆盖低优先级的配置；
+
+SpringBoot会从这四个位置全部加载主配置文件；
+
+
+
+### yml多文档块方式
+
+````yaml
+server:
+  port: 8081
+spring:
+  profiles:
+    active: prod #指定属于哪个环境
+---
+server:
+  port: 8083
+spring:
+  profiles: dev
+---
+server:
+  port: 8084
+spring:
+  profiles: prod  
+````
+
+
+
 ### 通过配置文件的属性注入给bean
 
 ```properties
@@ -262,7 +302,18 @@ public class GoodByeService implements MessageService {
 		return "goodbye"+name;
 	}
 }
-
+//被注入的类
+//输出到控制台测试
+public class OrderRunner1 implements CommandLineRunner{
+	@Autowired
+	private MessageService message;
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+		System.out.println( message.getMessage());
+	}
+	
+}
 ````
 
 ````yaml
@@ -285,12 +336,50 @@ name: gouye
 
 ### 日志
 
+#### 简单使用
+
+````java
+private static final Logger logger = LoggerFactory.getLogger(SpringbootStudyApplication.class);
+	
+	@PostConstruct
+	public void logSomething() {
+		//日志的级别由低到高   trace<debug<info<warn<error
+		//可以调整输出的日志级别；日志就只会在这个级别以以后的高级别生效
+		logger.trace("这是trace日志...");
+		logger.debug("这是debug日志...");
+		//SpringBoot默认给我们使用的是info级别的
+		logger.info("这是info日志...");
+		logger.warn("这是warn日志...");
+		logger.error("这是error日志...");
+	}
+````
+
+#### 修改配置文件
+
 ````properties
 #设置级别 和 输出日志到文件
 logging.level.root=warn
 logging.level.org.springframwork.web=debug
 #loggin.file=my.log 
 ````
+
+#### 修改默认日志框架
+
+````xml
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					  <groupId>ch.qos.logback</groupId>
+   			 		   <artifactId>logback-classic</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+<!-- 剔除掉默认日志框架，然后导入想要的框架 -->
+````
+
+
 
 ### 监控
 
