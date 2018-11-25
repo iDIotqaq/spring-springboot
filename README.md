@@ -131,7 +131,7 @@ public class SampleConfig {
 + start.spring.io
 + IDE创建
 
-### 默认配置为你教案
+### 默认配置文件
 
 + application.properties
 + application.yml
